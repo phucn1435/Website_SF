@@ -1,28 +1,14 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #4CAF50;
+    color: white;
     padding: 10px 0;
     text-align: center;
-}
-
-header .logo h1 {
-    margin: 0;
 }
 
 nav ul {
@@ -32,145 +18,85 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
-nav ul li a {
-    color: #fff;
+nav a {
+    color: white;
     text-decoration: none;
+}
+
+nav a.active {
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.page {
+    display: none;
 }
 
-/* Hero Section */
-.hero {
-    background: url('../images/hero-fish.jpg') no-repeat center center/cover;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
+.page.active {
+    display: block;
 }
 
-.hero h2 {
-    font-size: 3rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-/* Categories Section */
-.categories {
-    padding: 20px;
-    background-color: #fff;
-}
-
-.categories h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-.category-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.category {
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    text-align: center;
-    padding: 20px;
-    margin: 10px;
-    width: 30%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.category img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.category h3 {
-    margin: 10px 0;
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.category p {
-    color: #777;
-}
-
-/* About Us Page */
-.about {
-    padding: 20px;
-    background-color: #fff;
-}
-
-.about h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-.about p {
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-
-.owner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.owner img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
-}
-
-.owner p {
-    max-width: 600px;
-}
-
-/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
     padding: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-footer p {
-    margin: 5px 0;
+.category-list {
+    display: flex;
+    flex-direction: column; /* Đặt chiều xếp dọc */
+    align-items: center; /* Căn giữa các mục */
+    margin: 20px 0;
 }
+
+.category-item {
+    border: 1px solid #4CAF50;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%; /* Thay đổi chiều rộng cho phù hợp */
+    margin-bottom: 20px; /* Khoảng cách giữa các mục */
+    text-align: center;
+}
+
+.category-item h3 {
+    margin: 0 0 10px 0;
+    color: #4CAF50;
+}
+
+.category-slider {
+    margin: 20px 0;
+}
+
+.category-slider div {
+    padding: 10px;
+}
+
+.category-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
 
 /* Slick Slider Styles */
 .slider {
-    width: 80%;
     margin: 20px auto;
+    max-width: 800px; /* Chiều rộng tối đa của slider */
 }
 
-.slider-container img {
-    width: 100%;
-    border-radius: 8px;
+.slider div {
+    padding: 10px;
 }
 
-.slick-slide {
-    text-align: center;
-}
-
-.slick-prev, .slick-next {
-    font-size: 24px;
-    color: #333;
+.slider img {
+    width: 100%; /* Chiều rộng hình ảnh chiếm toàn bộ chiều rộng của khung */
+    height: auto; /* Chiều cao tự động để giữ tỷ lệ */
+    border-radius: 10px; /* Bo góc cho hình ảnh */
 }

@@ -5,73 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fish Store</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Slick Slider CSS -->
+    <!-- Slick CSS từ CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <div class="logo">
-            <h1>Fish Store</h1>
-        </div>
+        <h1>Fish Store</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="#fish-categories">Categories</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="active" onclick="showPage('home')">Home</a></li>
+                <li><a href="#category" onclick="showPage('category')">Category</a></li>
+                <li><a href="#about" onclick="showPage('about')">About</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Welcome to the Best Fish Store</h2>
-        <p>Fresh fish delivered to your door</p>
-    </section>
+    <main id="content">
+        <div id="home" class="page active">
+            <h2>Welcome to Fish Store!</h2>
+            <p>Explore our wide range of fresh fish.</p>
+            <div class="slider">
+                <div><img src="images/fish1.jpg" alt="Fish 1"></div>
+                <div><img src="images/fish2.jpg" alt="Fish 2"></div>
+                <div><img src="images/fish3.jpg" alt="Fish 3"></div>
+            </div>
 
-    <!-- Slick Slider Section -->
-    <section class="slider">
-        <div class="slider-container">
-            <div><img src="images/th (1).jpg" alt="Fish 1"></div>
-            <div><img src="images/th (2).jpg" alt="Fish 2"></div>
-            <div><img src="images/th (3).jpg" alt="Fish 3"></div>
-            <div><img src="images/th (4).jpg" alt="Fish 4"></div>
+            <h2 class="text-center">Categories</h2>
+            <div class="category-list">
+                <div class="category-item">
+                    <h3>Hàng tồn kho</h3>
+                    <div class="category-slider">
+                        <div><img src="images/fish1.jpg" alt="Fish 1"></div>
+                        <div><img src="images/fish2.jpg" alt="Fish 2"></div>
+                        <div><img src="images/fish3.jpg" alt="Fish 3"></div>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <h3>Hàng mới về</h3>
+                    <div class="category-slider">
+                        <div><img src="images/fish2.jpg" alt="Fish 2"></div>
+                        <div><img src="images/fish3.jpg" alt="Fish 3"></div>
+                        <div><img src="images/fish1.jpg" alt="Fish 1"></div>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <h3>Hàng có sẵn</h3>
+                    <div class="category-slider">
+                        <div><img src="images/fish3.jpg" alt="Fish 3"></div>
+                        <div><img src="images/fish1.jpg" alt="Fish 1"></div>
+                        <div><img src="images/fish2.jpg" alt="Fish 2"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
 
-    <!-- Fish Categories Section -->
-    <section id="fish-categories" class="categories">
-        <h2>Our Fish Categories</h2>
-        <div class="category-container">
-            <div class="category">
-                <img src="images/th (1).jpg" alt="Fresh Fish">
-                <h3>Fresh Fish</h3>
-                <p>New arrivals of the freshest fish.</p>
-            </div>
-            <div class="category">
-                <img src="images/th (2).jpg" alt="In Stock">
-                <h3>In Stock</h3>
-                <p>Popular and available fish.</p>
-            </div>
-            <div class="category">
-                <img src="images/th (3).jpg" alt="Special Offers">
-                <h3>Special Offers</h3>
-                <p>Get amazing deals on select fish!</p>
-            </div>
+        <div id="category" class="page">
+            <h2>Fish Categories</h2>
+            <p>Browse our fish categories.</p>
         </div>
-    </section>
+        <div id="about" class="page">
+            <h2>About Us</h2>
+            <p>Learn more about our fish store.</p>
+        </div>
+    </main>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <p>Contact us: 123-456-789 | Email: info@fishstore.com</p>
+    <footer>
         <p>&copy; 2024 Fish Store</p>
     </footer>
 
-    <!-- Slick Slider JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS từ CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
